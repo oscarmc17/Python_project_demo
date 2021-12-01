@@ -1,21 +1,33 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1 align='center'>Notes</h1>
-<ul class="list-group list-group-flush" id="notes">
-    {% for note in user.notes %}
-        <li class="list-group-item">{{ note.data }}
-            <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </li>
-    {% endfor %}
-</ul>
-<form method="POST">
-    <textarea name="note" id="note" class="form-control"></textarea>
-    <br>
-    <div align="center">
-        <button type="submit" class="btn btn-primary">Add Note</button>
+<div class="background">
+    <div align='center'>
+        <h2 >Hey, thanks for checking out my project!</h2>
+        <br>
+        <p class="text">Here is my application that uses Python, Flask, Databases, etc. <br>You're able to create an account, login and logout. Please feel free to ask me any questions. Thanks!</p>
     </div>
-</form>
+
+    <br>
+    <br>
+
+    <h4 align='center'>Add a Note</h4>
+    <p align='center'>You can leave a note and delete it. Check it out! Submitting note pops up a green success bar. <br>Leave blank and hit submit and a red warning pop up shows up.</p>
+    <ul class="list-group list-group-flush" id="notes">
+        {% for note in user.notes %}
+            <li class="list-group-item">{{ note.data }}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+    <form method="POST">
+        <textarea name="note" id="note" class="form-control"></textarea>
+        <br>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Add Note</button>
+        </div>
+    </form>
+</div>
 {% endblock %} 

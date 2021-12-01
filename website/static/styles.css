@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    /* height: 100vh; */
+    margin: 25px 0px;
+}
+
+.background{
+   /* background-color: aqua; */
+   /* height: 100vh; */
+   /* display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column; */
+}
+
+.text{
+    margin: 0px 50px;
+}
